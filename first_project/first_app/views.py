@@ -1,6 +1,8 @@
 from django.shortcuts import render
 from first_app import forms
-import pdb
+from bs4 import BeautifulSoup
+import requests
+from django.contrib.auth.models import User
 
 
 from django.contrib.auth import authenticate, login, logout
@@ -26,7 +28,11 @@ def user_logout(request):
 
 @login_required
 def optionchain(request):
-    return render(request,'first_app/optionchain.html',{})
+    #url = request.get['url']
+    #data = requests.get(url)
+    userList = User.objects.order_by('email')
+    dict = {'users': userList}
+    return render(request,'first_app/optionchain.html',context=dict)
 
 def userLogin(request):
 
