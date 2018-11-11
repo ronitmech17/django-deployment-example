@@ -2,7 +2,11 @@ from django.shortcuts import render
 from first_app import forms
 from bs4 import BeautifulSoup
 import requests
+<<<<<<< HEAD
 from django.contrib.auth.models import User
+=======
+import pandas as pd
+>>>>>>> f1e98b8e124967987e4b15acf762edd0439c8f8a
 
 
 from django.contrib.auth import authenticate, login, logout
@@ -28,11 +32,83 @@ def user_logout(request):
 
 @login_required
 def optionchain(request):
+<<<<<<< HEAD
     #url = request.get['url']
     #data = requests.get(url)
     userList = User.objects.order_by('email')
     dict = {'users': userList}
     return render(request,'first_app/optionchain.html',context=dict)
+=======
+
+    if request.method == 'POST':
+        Base_url = request.POST.get('url')
+        page = requests.get(Base_url)
+        page.status_code
+        page.content
+
+        soup = BeautifulSoup(page.content, 'html.parser')
+        #print(soup.prettify())
+
+        table_it = soup.find_all(class_="opttbldata")
+        table_cls_1 = soup.find_all(id="octable")
+
+
+        col_list = []
+
+        # The code given below will pull the headers of the Option Chain table
+        for mytable in table_cls_1:
+            table_head = mytable.find('thead')
+
+            try:
+                rows = table_head.find_all('tr')
+                for tr in rows:
+                    cols = tr.find_all('th')
+                    for th in cols:
+                        er = th.text
+                        ee = er.encode('utf8')
+                        ee = str(ee, 'utf-8')
+                        col_list.append(ee)
+
+            except:
+                print ("no thead")
+
+
+        col_list_fnl = [e for e in col_list if e not in ('CALLS','PUTS','Chart','\xc2\xa0','\xa0')]
+
+        table_cls_2 = soup.find(id="octable")
+        all_trs = table_cls_2.find_all('tr')
+        req_row = table_cls_2.find_all('tr')
+
+        new_table = pd.DataFrame(index=range(0,len(req_row)-3) , columns=col_list_fnl)
+
+        row_marker = 0
+
+        for row_number, tr_nos in enumerate(req_row):
+
+             # This ensures that we use only the rows with values
+            if row_number <=1 or row_number == len(req_row)-1:
+                continue
+            td_columns = tr_nos.find_all('td')
+
+             # This removes the graphs columns
+            select_cols = td_columns[1:22]
+            cols_horizontal = range(0,len(select_cols))
+
+            for nu, column in enumerate(select_cols):
+                utf_string = column.get_text()
+                utf_string = utf_string.strip('\n\r\t": ')
+
+                tr = utf_string.encode('utf-8')
+                tr = str(tr, 'utf-8')
+                tr = tr.replace(',' , '')
+                new_table.ix[row_marker,[nu]]= tr
+
+            row_marker += 1
+        html = new_table.to_html(classes=["table-bordered", "table-striped", "table-hover"])
+        data={'optionchain':html}
+        return render(request,'first_app/optionchain.html',context=data)
+    return render(request,'first_app/optionchain.html')
+>>>>>>> f1e98b8e124967987e4b15acf762edd0439c8f8a
 
 def userLogin(request):
 
