@@ -1,146 +1,74 @@
-
 <!DOCTYPE html>
+{% extends 'first_app/layout.html' %}
 {% load staticfiles %}
-<html lang="en">
-  <head>
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
-    <meta name="description" content="">
-    <meta name="author" content="">
-    <link rel="icon" href="../../favicon.ico">
+{% block body_block %}
 
-    <title>The Trading Terminal</title>
+ <div class="jumbotron">
+   <div class="container">
+     <br />
+     <br />
+     <br />
+     <h1>Code Your Trade</h1>
+     <br />
+     <br />
+     <br />
+     <br />
+     <br />
+     <br />
+     <p><strong>Risk</strong> comes from not knowing what you’re doing</p>
+     <p><a class="btn btn-danger btn-lg" href="#" role="button">Learn more &raquo;</a></p>
+     <img src="{% static 'images/code.png' %}" title="code.org logo" alt="code.org">
+   </div>
+ </div>
 
-    <!--This is google arvo font and font awesome vector font-->
-    <link href="https://fonts.googleapis.com/css?family=Arvo" rel="stylesheet">
-    <link rel="stylesheet" href = "https://use.fontawesome.com/releases/v5.5.0/css/all.css">
-    <link rel="stylesheet" href = "https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
-    <!-- Bootstrap core CSS -->
-   <link rel="stylesheet" href="{% static "css/bootstrap.min.css" %}" />
+ <div id="who">
+   <div class="container homepage">
+     <img src="{% static 'images/massiveacademylogo.png' %}" alt="Massive academy" title="Massive academy">
+   <h2>WHO WE ARE</h2>
+   <hr>
+   <p>If you want to have a better performance than the crowd, you must do things <strong>differently</strong> from the crowd</p>
+   </div>
+ </div>
 
-    <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
-    <link href="../../assets/css/ie10-viewport-bug-workaround.css" rel="stylesheet">
-
-    <!-- Custom styles for this template -->
-    <link rel="stylesheet" href="{% static "css/custom.css" %}" />
-
-    <!-- Just for debugging purposes. Don't actually copy these 2 lines! -->
-    <!--[if lt IE 9]><script src="../../assets/js/ie8-responsive-file-warning.js"></script><![endif]-->
-    <script type="text/javascript" src="http://gc.kis.v2.scr.kaspersky-labs.com/9C31C64F-938E-294C-A498-3EC6A9560126/main.js" charset="UTF-8"></script><script src="../../assets/js/ie-emulation-modes-warning.js"></script>
-
-    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
-    <!--[if lt IE 9]>
-      <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
-      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
-    <![endif]-->
-  </head>
-
-  <body>
-  {% csrf_token %}
-   <nav class="navbar navbar-inverse navbar-fixed-top">
-      <div class="container">
-        <div class="navbar-header">
-          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
-            <span class="sr-only">Toggle navigation</span>
-            <span class="icon-bar"></span>
-            <span class="icon-bar"></span>
-            <span class="icon-bar"></span>
-          </button>
-          <a class="navbar-brand" href="#">TradingTerminal_</a>
-        </div>
-        <div id="navbar" class="collapse navbar-collapse">
-          <ul class="nav navbar-nav navbar-right">
-            <li><a href="#who">WHO WE ARE</a></li>
-            <li><a href="#Get-Involved">GET INVOLVED</a></li>
-            <li><a href="#">LOG IN</a></li>
-          </ul>
-        </div><!--/.nav-collapse -->
-      </div>
-    </nav>
-
-    <!-- Main jumbotron for a primary marketing message or call to action -->
-    <div class="jumbotron">
-      <div class="container">
-        <br />
-        <br />
-        <br />
-        <h1>Code Your Trade</h1>
-        <br />
-        <br />
-        <br />
-        <br />
-        <br />
-        <br />
-        <p><strong>Risk</strong> comes from not knowing what you’re doing</p>
-        <p><a class="btn btn-danger btn-lg" href="#" role="button">Learn more &raquo;</a></p>
-        <img src="{% static "images/code.png" %}" title="code.org logo" alt="code.org">
-      </div>
+ <div id="Get-Involved">
+ <div class="container homepage">
+   <!-- Example row of columns -->
+   <h2>Get Involved</h2>
+   <hr>
+   <div class="row">
+     <div class="col-md-4">
+       <span class="fa-stack fa-4x">
+       <i class="fas fa-circle fa-stack-2x"></i>
+       <i class="fas fa-user fa-stack-1x fa-inverse"></i>
+       </span>
+       <h3>STUDENTS</h3>
+       <p>Want to learn how to code your trades? Click the button below to submit a join request and we'll let you know how to get involved. </p>
+       <p><a class="btn btn-default" href="https://docs.google.com/forms/d/e/1FAIpQLSclayD956qUgYsm1LJPlnX2m21ZzJ2N0gvpS-_znNqZwYxF_A/viewform?usp=sf_link" role="button">Start Learning &raquo;</a></p>
+     </div>
+     <div class="col-md-4">
+       <span class="fa-stack fa-4x">
+       <i class="fas fa-circle fa-stack-2x"></i>
+       <i class="far fa-edit fa-stack-1x fa-inverse"></i>
+       </span>
+       <h3>EDUCATORS</h3>
+       <p>Want to bring this initiative to your school or institution? Awesome! Click the button below and we'll make it happen. </p>
+       <p><a class="btn btn-default" href="#" role="button">Join the initiative &raquo;</a></p>
     </div>
+     <div class="col-md-4">
+       <span class="fa-stack fa-4x">
+       <i class="fas fa-circle fa-stack-2x"></i>
+       <i class="fas fa-dollar-sign fa-stack-1x fa-inverse"></i>
+       </span>
+       <h3>SPONSORS</h3>
+       <p>We love all the support we get to help host more events, and empower more lives with the knowledge of coding. Click to get involved.</p>
+       <p><a class="btn btn-default" href="#" role="button">Give Support &raquo;</a></p>
+     </div>
+   </div>
+ </div>
+</div>
 
-    <div id="who">
-      <div class="container homepage">
-        <img src="{% static "images/massiveacademylogo.png" %}" alt="Massive academy" title="Massive academy">
-      <h2>WHO WE ARE</h2>
-      <hr>
-      <p>If you want to have a better performance than the crowd, you must do things <strong>differently</strong> from the crowd</p>
-      </div>
+<footer>
+    <div class="container">
     </div>
-
-    <div id="Get-Involved">
-    <div class="container homepage">
-      <!-- Example row of columns -->
-      <h2>Get Involved</h2>
-      <hr>
-      <div class="row">
-        <div class="col-md-4">
-          <span class="fa-stack fa-4x">
-          <i class="fas fa-circle fa-stack-2x"></i>
-          <i class="fas fa-user fa-stack-1x fa-inverse"></i>
-          </span>
-          <h3>STUDENTS</h3>
-          <p>Want to learn how to code your trades? Click the button below to submit a join request and we'll let you know how to get involved. </p>
-          <p><a class="btn btn-default" href="https://docs.google.com/forms/d/e/1FAIpQLSclayD956qUgYsm1LJPlnX2m21ZzJ2N0gvpS-_znNqZwYxF_A/viewform?usp=sf_link" role="button">Start Learning &raquo;</a></p>
-        </div>
-        <div class="col-md-4">
-          <span class="fa-stack fa-4x">
-          <i class="fas fa-circle fa-stack-2x"></i>
-          <i class="far fa-edit fa-stack-1x fa-inverse"></i>
-          </span>
-          <h3>EDUCATORS</h3>
-          <p>Want to bring this initiative to your school or institution? Awesome! Click the button below and we'll make it happen. </p>
-          <p><a class="btn btn-default" href="#" role="button">Join the initiative &raquo;</a></p>
-       </div>
-        <div class="col-md-4">
-          <span class="fa-stack fa-4x">
-          <i class="fas fa-circle fa-stack-2x"></i>
-          <i class="fas fa-dollar-sign fa-stack-1x fa-inverse"></i>
-          </span>
-          <h3>SPONSORS</h3>
-          <p>We love all the support we get to help host more events, and empower more lives with the knowledge of coding. Click to get involved.</p>
-          <p><a class="btn btn-default" href="#" role="button">Give Support &raquo;</a></p>
-        </div>
-      </div>
-    </div> <!-- /container -->
-  </div>
-
-
-      <footer>
-         <div class="container">
-          </div>
-      </footer>
-
-
-
-
-    <!-- Bootstrap core JavaScript
-    ================================================== -->
-    <!-- Placed at the end of the document so the pages load faster -->
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
-    <script>window.jQuery || document.write('<script src="../../assets/js/vendor/jquery.min.js"></script>')</script>
-    <script src="{% static "js/bootstrap.min.js" %}"></script>
-    <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
-    <script src="../../assets/js/ie10-viewport-bug-workaround.js"></script>
-  </body>
-</html>
+</footer>
+{% endblock%}

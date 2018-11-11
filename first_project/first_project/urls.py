@@ -19,7 +19,8 @@ from django.conf.urls import include
 from first_app import views
 
 urlpatterns = [
-    #path('',views.index,name='index'),
-    path('', include('first_app.urls')),
+    path('',views.index,name='index'),
+    path('tradingterminal/', include('first_app.urls')),
     path('admin/', admin.site.urls),
+    path('logout/', views.user_logout, name='logout'),
 ]
