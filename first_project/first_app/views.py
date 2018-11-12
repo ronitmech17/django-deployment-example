@@ -2,12 +2,8 @@ from django.shortcuts import render
 from first_app import forms
 from bs4 import BeautifulSoup
 import requests
-<<<<<<< HEAD
 from django.contrib.auth.models import User
-=======
 import pandas as pd
->>>>>>> f1e98b8e124967987e4b15acf762edd0439c8f8a
-
 
 from django.contrib.auth import authenticate, login, logout
 from django.http import HttpResponseRedirect, HttpResponse
@@ -32,14 +28,6 @@ def user_logout(request):
 
 @login_required
 def optionchain(request):
-<<<<<<< HEAD
-    #url = request.get['url']
-    #data = requests.get(url)
-    userList = User.objects.order_by('email')
-    dict = {'users': userList}
-    return render(request,'first_app/optionchain.html',context=dict)
-=======
-
     if request.method == 'POST':
         Base_url = request.POST.get('url')
         page = requests.get(Base_url)
@@ -108,7 +96,6 @@ def optionchain(request):
         data={'optionchain':html}
         return render(request,'first_app/optionchain.html',context=data)
     return render(request,'first_app/optionchain.html')
->>>>>>> f1e98b8e124967987e4b15acf762edd0439c8f8a
 
 def userLogin(request):
 
