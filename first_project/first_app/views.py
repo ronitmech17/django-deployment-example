@@ -2,10 +2,10 @@ from django.shortcuts import render
 from first_app import forms
 from bs4 import BeautifulSoup
 import requests
+from django.contrib.auth.models import User
 import pandas as pd
 from nsepy import get_history
 from datetime import date
-
 
 from django.contrib.auth import authenticate, login, logout
 from django.http import HttpResponseRedirect, HttpResponse
@@ -30,7 +30,6 @@ def user_logout(request):
 
 @login_required
 def optionchain(request):
-
     if request.method == 'POST':
         script = request.POST.get('url')
         #Base_url = request.POST.get('url')
