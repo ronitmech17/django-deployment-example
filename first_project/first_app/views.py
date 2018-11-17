@@ -4,6 +4,8 @@ from bs4 import BeautifulSoup
 import requests
 from django.contrib.auth.models import User
 import pandas as pd
+from nsepy import get_history
+from datetime import date
 
 from django.contrib.auth import authenticate, login, logout
 from django.http import HttpResponseRedirect, HttpResponse
@@ -29,11 +31,17 @@ def user_logout(request):
 @login_required
 def optionchain(request):
     if request.method == 'POST':
-        Base_url = request.POST.get('url')
-        page = requests.get(Base_url)
-        page.status_code
-        page.content
+        script = request.POST.get('url')
+        #Base_url = request.POST.get('url')
+        #page = requests.get(Base_url)
+        #page.status_code
+        #page.content
+        df = get_history(symbol=script, start=date(2018,5,1), end=date(2018,10,31))
 
+
+
+
+        '''Webscrapping option chain
         soup = BeautifulSoup(page.content, 'html.parser')
         #print(soup.prettify())
 
@@ -93,6 +101,8 @@ def optionchain(request):
 
             row_marker += 1
         html = new_table.to_html(classes=["table-bordered", "table-striped", "table-hover"])
+        '''
+        html = df.to_html(classes=["table-bordered", "table-striped", "table-hover"])
         data={'optionchain':html}
         return render(request,'first_app/optionchain.html',context=data)
     return render(request,'first_app/optionchain.html')

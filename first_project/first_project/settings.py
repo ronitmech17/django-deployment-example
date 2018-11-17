@@ -26,7 +26,7 @@ SECRET_KEY = 'sgap*yf3omqv(yr7ks*7xw68)x!40%!8n*uaqze#djz#y5%=01'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['ronitmech17.pythonanywhere.com']
+ALLOWED_HOSTS = ['127.0.0.1','ronitmech17.pythonanywhere.com']
 
 
 # Application definition
