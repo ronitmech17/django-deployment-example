@@ -1,4 +1,4 @@
-Date,Symbol,Series,Prev Close,Open,High,Low,Last,Close,VWAP,Volume,Turnover,Trades,Deliverable Volume,%Deliverble
+Date,Symbol,Series,PrevClose,Open,High,Low,Last,Close,VWAP,Volume,Turnover,Trades,DeliverableVolume,%Deliverble
 2004-08-25,TCS,EQ,850,1198.7,1198.7,979,985,987.95,1008.32,17116372,1.72588E+15,,5206360,0.3042
 2004-08-26,TCS,EQ,987.95,992,997,975.3,976.85,979,985.65,5055400,4.98286E+14,,1294899,0.2561
 2004-08-27,TCS,EQ,979,982.4,982.4,958.55,961.2,962.65,969.94,3830750,3.71559E+14,,976527,0.2549

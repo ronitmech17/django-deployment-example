@@ -1,4 +1,4 @@
-Date,Symbol,Series,Prev Close,Open,High,Low,Last,Close,VWAP,Volume,Turnover,Trades,Deliverable Volume,%Deliverble
+Date,Symbol,Series,PrevClose,Open,High,Low,Last,Close,VWAP,Volume,Turnover,Trades,DeliverableVolume,%Deliverble
 1998-01-01,RELIANCE,EQ,167.7,166.85,171.25,165.95,,169.25,169.28,6137700,1.04E+14,,,
 1998-01-02,RELIANCE,EQ,169.25,170,171.15,168.75,,169.3,169.94,3282150,5.58E+13,,,
 1998-01-05,RELIANCE,EQ,169.3,170.15,174.5,170.15,,172.45,173.15,6552200,1.13E+14,,,

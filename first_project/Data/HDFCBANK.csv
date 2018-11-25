@@ -1,4 +1,4 @@
-Date,Symbol,Series,Prev Close,Open,High,Low,Last,Close,VWAP,Volume,Turnover,Trades,Deliverable Volume,%Deliverble
+Date,Symbol,Series,PrevClose,Open,High,Low,Last,Close,VWAP,Volume,Turnover,Trades,DeliverableVolume,%Deliverble
 1998-01-01,HDFCBANK,EQ,80.5,79.5,81.4,79.5,,80.75,80.48,40300,3.24325E+11,,,
 1998-01-02,HDFCBANK,EQ,80.75,81.5,82.5,80.25,,80.85,80.99,54300,4.39774E+11,,,
 1998-01-05,HDFCBANK,EQ,80.85,81.5,81.5,79.65,,79.9,80.67,51200,4.13018E+11,,,

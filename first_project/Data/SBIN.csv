@@ -1,4 +1,4 @@
-Date,Symbol,Series,Prev Close,Open,High,Low,Last,Close,VWAP,Volume,Turnover,Trades,Deliverable Volume,%Deliverble
+Date,Symbol,Series,PrevClose,Open,High,Low,Last,Close,VWAP,Volume,Turnover,Trades,DeliverableVolume,%Deliverble
 1998-01-01,SBIN,EQ,244.95,243.05,247.45,242.25,,246.35,245.61,3526500,8.66E+13,,,
 1998-01-02,SBIN,EQ,246.35,247,250,246.8,,249.1,248.45,3139850,7.80E+13,,,
 1998-01-05,SBIN,EQ,249.1,250.9,252.15,246.6,,247.65,249.54,4077250,1.02E+14,,,

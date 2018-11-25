@@ -1,4 +1,4 @@
-Date,Symbol,Series,Prev Close,Open,High,Low,Last,Close,VWAP,Volume,Turnover,Trades,Deliverable Volume,%Deliverble
+Date,Symbol,Series,PrevClose,Open,High,Low,Last,Close,VWAP,Volume,Turnover,Trades,DeliverableVolume,%Deliverble
 1998-01-01,TELCO,EQ,297.75,297.9,303,296.5,,300.25,300.03,708550,2.13E+13,,,
 1998-01-02,TELCO,EQ,300.25,301.5,308.4,300.5,,306.15,305.63,1524050,4.66E+13,,,
 1998-01-05,TELCO,EQ,306.15,308.8,309,296.5,,298.65,302.55,1451800,4.39E+13,,,
