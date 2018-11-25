@@ -22,12 +22,18 @@
       </div>
   </div>
   <div class = "container">
+    <div class="row">
+      <div id="left-half" class="col-md-6">
+        {{optionchain|safe}}
+      </div>
 
-    <h3>Data: </h3>
-    <!-- {% autoescape off %} -->
-      {{optionchain|safe}}
-    <!-- {% endautoescape %} -->
-
+      <div id="right-half" class="col-md-6">
+        <svg width="100" height="100">
+            {{plot|safe}}
+        </svg>
+      </div>
+    </div>
   </div>
+
 
 {% endblock%}
