@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+{% extends 'first_app/layout.html' %}
+{% load staticfiles %}
+{% block body_block %}
+<div class="wrapper">
+  <div class="grid00">
+      <div class="titleDiv">
+        <label>Script Name</label>
+      </div>
+      <select multiple class="script-list-menu" id="scripts-list"><br />
+        <option class="script-list-items">Item 1</option>
+        <option class="script-list-items">Item 2</option>
+        <option class="script-list-items">Item 3</option>
+      </select>
+  </div>
+  <div class="grid01">
+    <div class="container">
+      <div class="titleDiv">
+        <label id="resultslabel">Performance</label>
+      </div>
+    </div>
+  </div>
+  <div class="grid10">
+    <div class="titleDiv">
+      <label id="defineModellabel">Define Model</label>
+    </div>
+    <form class="form-inline" id="parameterForm">
+      <label>Start Date </label><br /><input class="form-control" type="date" id="startDate" /><br />
+      <label>End Date </label><br /><input class="form-control" type="date" id="endDate" /><br />
+      <label>Train Set </label><br /><input class="form-control" type="number" min=0 max=100 step=1 />%<br />
+      <label>Model </label><br /><select class="form-control" class="model-select-menu">
+        <option class="model-select-items">Option1</option>
+        <option class="model-select-items">Option2</option>
+        <option class="model-select-items">Option3</option>
+    </select><br /><br />
+    <input type="submit" value="Apply" class="btn btn-submit"/>
+    </form>
+  </div>
+  <div class="grid11">
+    <div class="container">
+      <div class="titleDiv">
+        <label id="plotslabel">Plots</label>
+      </div>
+    </div>
+  </div>
+</div>
+{% endblock%}

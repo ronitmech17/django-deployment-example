@@ -117,3 +117,69 @@ footer{
 #register{
   margin-top:50px;
 }
+
+
+/* mlSimulator */
+  *{
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+  }
+  .wrapper {
+  display: grid;
+  grid-template-columns: 30% 70%;
+  grid-template-rows: 50px repeat(2, 1fr);
+  grid-gap: 10px;
+  width: 100vw;
+  height: 100vh;
+  }
+  .grid00{
+    grid-column: 1 / 2;
+    grid-row: 2 / 3;
+  }
+  .grid01{
+    grid-column: 2 / 3;
+    grid-row: 2 / 3;
+  }
+  .grid10{
+    grid-column: 1 / 2;
+    grid-row: 3 / 4;
+  }
+  .grid11{
+    grid-column: 2 / 3;
+    grid-row: 3 / 4;
+  }
+  .grid00, .grid01, .grid10, .grid11{
+    border: solid;
+    border-collapse: collapse;
+    background-color: white;
+  }
+  #scripts-list{
+    overflow: scroll;
+    width: 100%;
+    height: 90%;
+    padding: 0px;
+  }
+  #scriptname{
+    height: 10%;
+  }
+  .script-list-items, .model-select-items{
+    height: 30px;
+    font-size: 20px;
+    border-bottom: solid;
+    border-color: #efefef;
+  }
+  .script-list-items:checked {
+    color: red;
+  }
+  .titleDiv, #defineModel{
+    background-color: green;
+    color: white;
+    width:100%;
+  }
+  .container{
+    padding: 0px;
+  }
+  #parameterForm, .titleDiv{
+    padding-left: 20px;
+  }

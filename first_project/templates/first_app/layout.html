@@ -31,6 +31,7 @@
         </div>
         <div id="navbar" class="collapse navbar-collapse">
           <ul class="nav navbar-nav navbar-right">
+            <li><a href="{% url 'tradingterminal:mlSimulator' %}">TRADE SIMULATOR</a></li>
             <li><a href="{% url 'tradingterminal:optionchain' %}">OPTION CHAIN</a></li>
             <li><a href="{% url 'admin:index' %}">ADMIN</a></li>
             {% if user.is_authenticated %}

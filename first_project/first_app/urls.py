@@ -7,4 +7,5 @@ urlpatterns = [
     path('userLogin/',views.userLogin,name='userLogin'),
     path('newUser/',views.newUser,name='newUser'),
     path('optionchain/',views.optionchain,name='optionchain'),
+    path('mlSimulator/',views.mlSimulator,name='mlSimulator')
 ]

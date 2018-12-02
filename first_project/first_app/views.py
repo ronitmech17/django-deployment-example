@@ -99,3 +99,7 @@ def newUser(request):
             return index(request)
 
     return render(request,"first_app/register.html",context={'loginform': loginform})
+
+@login_required
+def mlSimulator(request):
+    return render(request,'first_app/mlSimulator.html')
